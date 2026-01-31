@@ -12,10 +12,26 @@ window.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('.social-item').forEach(item => {
     item.addEventListener('mouseenter', () => {
       gsap.to(item, { y: -5, duration: 0.3, ease: 'power2.out' });
+      playHover();
     });
     item.addEventListener('mouseleave', () => {
       gsap.to(item, { y: 0, duration: 0.3, ease: 'power2.out' });
     });
+    item.addEventListener('click', playClick);
+  });
+
+  // Sound Effects
+  const clickSound = new Audio("sounds/mixkit-cool-interface-click-tone-2568.wav");
+  const hoverSound = new Audio("sounds/tunetank.com_mouse-hover.wav");
+  clickSound.volume = 0.5;
+  hoverSound.volume = 0.2;
+
+  function playClick() { clickSound.currentTime = 0; clickSound.play().catch(e => { }); }
+  function playHover() { hoverSound.currentTime = 0; hoverSound.play().catch(e => { }); }
+
+  document.querySelectorAll("a, button").forEach(el => {
+    el.addEventListener("click", playClick);
+    el.addEventListener("mouseenter", playHover);
   });
 
   // Mobile Menu

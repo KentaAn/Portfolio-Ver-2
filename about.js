@@ -60,11 +60,33 @@ window.addEventListener("DOMContentLoaded", () => {
     if (staticPose) staticPose.src = gifs[currentGifIndex];
   }
 
+  // Sound Effects
+  const clickSound = new Audio("sounds/mixkit-cool-interface-click-tone-2568.wav");
+  const hoverSound = new Audio("sounds/tunetank.com_mouse-hover.wav");
+  clickSound.volume = 0.5;
+  hoverSound.volume = 0.2;
+
+  function playClick() { clickSound.currentTime = 0; clickSound.play().catch(e => { }); }
+  function playHover() { hoverSound.currentTime = 0; hoverSound.play().catch(e => { }); }
+
+  document.querySelectorAll("a, button").forEach(el => {
+    el.addEventListener("click", playClick);
+    el.addEventListener("mouseenter", playHover);
+  });
+
   if (arrowLeft) {
-    arrowLeft.addEventListener("click", cycleGif);
+    arrowLeft.addEventListener("click", () => {
+      cycleGif();
+      playClick();
+    });
+    arrowLeft.addEventListener("mouseenter", playHover);
   }
 
   if (arrowRight) {
-    arrowRight.addEventListener("click", cycleGif);
+    arrowRight.addEventListener("click", () => {
+      cycleGif();
+      playClick();
+    });
+    arrowRight.addEventListener("mouseenter", playHover);
   }
 });
