@@ -1,0 +1,140 @@
+/* About Page Specific Styles */
+
+.about-section {
+  position: relative;
+  z-index: 1;
+  padding-top: 8rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 4rem;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  max-width: 1200px;
+  width: 90%;
+  flex-wrap: wrap;
+}
+
+.about-image-wrapper {
+  flex: 1;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.image-card {
+  padding: 1rem;
+  border-radius: 20px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+
+.about-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.text-card {
+  padding: 2rem;
+  border-radius: 20px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.about-text:last-child {
+  margin-bottom: 0;
+}
+
+.about-text strong {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.highlight {
+  color: var(--accent-secondary);
+  font-weight: 600;
+}
+
+/* About Page Controls */
+.character-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0 1rem;
+}
+
+.control-arrow {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  /* Removed circle */
+}
+
+.control-arrow:hover {
+  transform: scale(1.1);
+  background: transparent;
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.6));
+  /* Add glow on hover */
+}
+
+.control-arrow img {
+  width: 120px;
+  height: auto;
+  filter: invert(1);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    padding-top: 4rem;
+    gap: 2rem;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+
+  .about-image-wrapper {
+    max-width: 300px;
+  }
+}

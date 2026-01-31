@@ -1,0 +1,136 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selected Projects</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="projects.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="projects.js" defer></script>
+</head>
+
+<body>
+  <div class="app-container">
+    <div class="glass-background"></div>
+
+    <!-- Gradient Orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <nav class="glass-nav">
+      <a href="index.html" class="logo" style="text-decoration: none; color: white;">DAN</a>
+      <div class="nav-links">
+        <a href="about.html" class="nav-item">About</a>
+        <a href="projects.html" class="nav-item active">Projects</a>
+        <a href="contact.html" class="nav-item">Contact</a>
+      </div>
+      <button class="mobile-menu-btn">☰</button>
+    </nav>
+
+    <main class="projects-section">
+      <div class="section-header">
+        <h2 class="section-title">Selected <span class="gradient-text">Works</span></h2>
+        <p class="section-desc">A collection of digital experiences and experiments.</p>
+      </div>
+
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="project-card">
+              <img src="images/Project 1.png" alt="Project 1" />
+              <div class="card-overlay"></div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="project-card">
+              <img src="images/Project 2.png" alt="Project 2" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="project-card">
+              <img src="images/Project 3.png" alt="Project 3" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="project-card">
+              <img src="images/Project 4.png" alt="Project 4" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="project-card">
+              <img src="images/Project 5.png" alt="Project 5" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="project-card">
+              <img src="images/Project 6.png" alt="Project 6" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="project-card">
+              <img src="images/Project 7.png" alt="Project 7" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="project-card">
+              <img src="images/Project 8.png" alt="Project 8" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="project-card">
+              <img src="images/Project 9.png" alt="Project 9" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="project-card">
+              <img src="images/Project 10.png" alt="Project 10" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="project-card">
+              <img src="images/Project 11.png" alt="Project 11" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="project-card">
+              <img src="images/Project 12.png" alt="Project 12" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="project-card">
+              <img src="images/Project 13.png" alt="Project 13" />
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+
+      <div class="project-info">
+        <h3 id="project-title" class="project-title-dynamic"
+          style="margin-bottom: 0.5rem; font-size: 1.5rem; color: var(--accent-secondary); text-align: center;">Project
+          Title</h3>
+        <p id="project-desc" class="info-text">
+          Games have always been a part of human life, evolving to suit different situations.
+          This collection explores various interactive formats.
+        </p>
+        <a id="project-link" href="#" class="btn btn-secondary" target="_blank"
+          style="margin-top: 2rem; display: inline-flex; align-items: center; gap: 0.5rem;">
+          View Details <img src="images/Arrow 1.png" alt="Arrow" style="height: 12px; filter: invert(1);">
+        </a>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>
